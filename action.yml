@@ -1,0 +1,18 @@
+name: Setup k8s kustomize
+description: GitHub action for setup kubernetes kustomize
+author: Grumpy Programmer
+branding:
+  icon: anchor
+  color: blue
+inputs:
+  version:
+    description: Specific version of kustomize to be installed, example 4.5.4
+    required: false
+    default: latest
+  token:
+    description: Github token. Since there's a default, this is typically not supplied by the user.
+    default: ${{ github.token }}
+    required: false
+runs:
+  using: node16
+  main: dist/main/index.js
