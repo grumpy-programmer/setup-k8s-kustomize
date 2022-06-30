@@ -9,8 +9,7 @@
     "prebuild": "rm -rf dist",
     "build": "npm-run-all -p build:main",
     "watch:main": "ncc build --watch src/main.ts -o dist/main",
-    "watch": "npm-run-all -p watch:main",
-    "upgrade": "ncu -u"
+    "watch": "npm-run-all -p watch:main"
   },
   "dependencies": {
     "@actions/core": "^1.8.0",
@@ -20,7 +19,6 @@
   "devDependencies": {
     "@types/node": "^17.0.31",
     "@vercel/ncc": "^0.33.4",
-    "npm-check-updates": "^12.5.11",
     "npm-run-all": "^4.1.5",
     "typescript": "^4.6.4"
   }
